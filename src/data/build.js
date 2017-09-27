@@ -36,7 +36,8 @@ module.exports = function build(
 
   invariant(Shaders.exists(shader), "Shader #%s does not exists", shader);
 
-  const shaderName = Shaders.get(shader).name;
+  //const shaderName = Shaders.get(shader).name;
+  const shaderName = Shaders.get(shader).toString();
   invariantStrictPositive(
     pixelRatio,
     "GL Component (" + shaderName + "). pixelRatio prop"
